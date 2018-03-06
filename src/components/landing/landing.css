@@ -15,6 +15,11 @@ div > button {
   button + p{
     font-size: 30px;
   }
+
+  /* 26E */
+  input[type = text]:disabled{
+      background-color: gray;
+  }
   
   /* 29C */
   @media(min-width: 320px){

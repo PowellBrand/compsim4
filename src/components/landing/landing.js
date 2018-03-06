@@ -47,7 +47,7 @@ class Landing extends Component {
                         <p>User Name: </p>
                         <input className="nameInput" type="text" ref="name" />
                         <p>Password: </p>
-                        <input className="nameInput" type="text" ref="password" />
+                        <input className="passInput" type="text" disabled="disabled" ref="password" />
                         <button type="submit">Submit</button>
                     </form>
                     <div className="showUser"> User: {this.getUser}</div>
