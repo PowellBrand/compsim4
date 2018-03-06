@@ -11,6 +11,7 @@
     "massive": "^4.7.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",
@@ -21,5 +22,20 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "server/server.js",
+  "proxy": "http://localhost:4020",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PowellBrand/compsim4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PowellBrand/compsim4/issues"
+  },
+  "homepage": "https://github.com/PowellBrand/compsim4#readme"
 }

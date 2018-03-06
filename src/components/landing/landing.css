@@ -1,0 +1,24 @@
+/* 22C-3, 23E, 24E */
+div > button {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    background-color: red;
+  }
+  /* 22C-4 */
+  div p {
+    color: blue;
+   
+  }
+  
+  /* 22C-5 */
+  button + p{
+    font-size: 30px;
+  }
+  
+  /* 29C */
+  @media(min-width: 320px){
+    .main{
+      display: inline-block;
+    }
+  }

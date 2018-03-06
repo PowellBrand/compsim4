@@ -30,8 +30,7 @@ export function createChar(value) {
 function reducer(state = initialState, action) {
     switch (action.type) {
       
-        case QUESTS + '_FULFILLED':
-            return Object.assign({}, state, { quests: action.payload })
+       
 
         default: return state;
     }
