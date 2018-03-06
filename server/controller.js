@@ -1,6 +1,7 @@
 module.exports = {
 
  //Create User
+ //75D
  createUser: (req,res)=>{
      const db = req.app.get('db');
      //76D
@@ -12,11 +13,12 @@ module.exports = {
  },
 
  //76E
-getUser: (req, res)=>{
-    constdb = req.app.get('db');
+getUser: (req, res, next)=>{
+    const db = req.app.get('db');
     db.getUser().then(name =>{
         res.send(name)
     }).catch(e=> console.log(e))
-}
+},
+
 
 }

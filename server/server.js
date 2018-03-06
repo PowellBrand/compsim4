@@ -8,9 +8,15 @@ const express = require('express')
 , app = express()
 , controller = require('./controller');
 
-//76F
+//76F 75C
 app.use(bodyParser.json());
 app.use(cors());
+
+//75E logs every time a request is made
+app.use(function (req,res,next){
+    console.log('This was called at', Date.now())
+    next()
+})
 
 massive(process.env.CONNECTIONSTRING).then(db => {
     app.set('db', db);
