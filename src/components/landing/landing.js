@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { createUser, getUser } from '../../ducks/reducer';
+import { connect } from 'react-redux';
+
 import './landing.css'
 
 class Landing extends Component {
@@ -8,6 +11,9 @@ class Landing extends Component {
         this.state = {
             count: 0,
         };
+        // 37C
+        this.addCount = this.addCount.bind(this);
+        this.subCount = this.subCount.bind(this);
     }
 
     addCount = () => {
@@ -28,8 +34,16 @@ class Landing extends Component {
         this.refs.password.value = '';
     }
 
-    getUser(){
+    getUser() {
         axios.get('/api/getUser')
+    }
+
+    playSound() {
+        var snd = new Audio();
+        snd.src = "What_Dan.mp3"
+        document.getElementById(snd)
+        snd.play();
+        snd.currentTime = 0;
     }
 
 
@@ -52,10 +66,27 @@ class Landing extends Component {
                     </form>
                     <div className="showUser"> User: {this.getUser}</div>
                 </div>
+                <a href='/view1'><button className="startBtn">Start</button></a>
+                <audio id="snd"></audio>
+                <button onClick={() => this.playSound()}>What?</button>
 
+
+                {/* 56C */}
+                <iframe width="420" height="315"
+                    src="https://www.youtube.com/embed/CQlatm6yAzQ">
+                </iframe>
             </div>
         );
     }
 }
 
-export default Landing;
+// 36E
+function mapStateToProps(state) {
+
+    return {
+        count: state.count,
+        name: state.name,
+        password: state.password
+    }
+}
+export default connect(mapStateToProps, { createUser })(Landing)
